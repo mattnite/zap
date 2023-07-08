@@ -4,8 +4,8 @@
 
     .dependencies = .{
         .@"facil.io" = .{
-            .url = "https://github.com/zigzap/facil.io/archive/refs/tags/zap-0.0.10.tar.gz",
-            .hash = "12205e49e9c2c6f0dcab9423fc92d8f0450a4dc2706b68a6d45a448a738ebff70103",
+            .url = "https://github.com/mattnite/facil.io/archive/da5805eab7f34f68498a000f616ccc4e40d00a79.tar.gz",
+            .hash = "1220ac14c2aac7239d7813397f9451991cbd7251e12d0aa5ff528a1958fec09df5eb",
         }
     }
 }

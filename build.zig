@@ -36,6 +36,8 @@ pub fn build(b: *std.build.Builder) !void {
     const facil_install_step = b.addInstallArtifact(facil_lib);
     b.getInstallStep().dependOn(&facil_install_step.step);
 
+    const all_step = b.step("all", "build all examples");
+
     inline for ([_]struct {
         name: []const u8,
         src: []const u8,
@@ -96,6 +98,7 @@ pub fn build(b: *std.build.Builder) !void {
         // install the artifact - depending on the "example"
         const example_build_step = b.addInstallArtifact(example);
         example_step.dependOn(&example_build_step.step);
+        all_step.dependOn(&example_build_step.step);
     }
 
     //
